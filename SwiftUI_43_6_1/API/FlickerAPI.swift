@@ -130,8 +130,10 @@ class FlickerAPI: ObservableObject {
         FlickerAPI().downloadDataUsingAPI(requestURL) { json, error in
             
             guard let json = json else {
+                
                 print("failed to download data from Flickr, error: \(String(describing: error?.localizedDescription))")
                 return
+                
             }
             
             let arrOfData = FlickerAPI().parsingJSON_DuringSearch(searchText, json)
