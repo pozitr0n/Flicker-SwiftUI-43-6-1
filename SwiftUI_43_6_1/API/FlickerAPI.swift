@@ -149,10 +149,13 @@ class FlickerAPI: ObservableObject {
 extension CustomError: CustomStringConvertible {
    
     public var description: String {
+        
         switch self {
+        
         case .notFound:
             return "The specified item could not be found."
         }
+        
     }
     
 }
